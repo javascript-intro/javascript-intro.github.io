@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #FFC6AC;
+    --accent-color: #F40076;
+    --bg-color: #002A32;
+    --side-color-1: #c4a29e;
+    --side-color-2: #e15259;
+
+}
+.main-page {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+
+.main-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: #FFC6AC;
+    opacity: 0.7;
+    background-image: linear-gradient(135deg, #002A32 50%, transparent 25%), linear-gradient(225deg, #002A32 25%, transparent 25%), linear-gradient(45deg, #002A32 25%, transparent 25%), linear-gradient(315deg, #002A32 25%, #FFC6AC 25%);
+    background-position: 40px 0, 40px 0, 0 0, 0 0;
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+.big-name {
+  font-family: "IBM Plex Mono", monospace;
+    font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #e2f7fc;
+}
+
+.card-name {
+      font-family: "IBM Plex Mono", monospace;
+    font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #e2f7fc;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+.top {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+    gap: 20px;
+}
+
+.top .hero {
+    grid-column: 2;
+}
+
+.sub-hero {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+  color: white;
+  padding: 5px;
+}
+
+.contact-button {
+    grid-column: 3;
+    justify-self: end;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    background-color: var(--accent-color);
+
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 20px 50px 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: var(--side-color-2);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.details {
+      font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.details-title {
+      font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bg-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+      font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
