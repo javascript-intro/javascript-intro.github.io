@@ -1,0 +1,147 @@
+:root {
+    font-size: 16px;
+    --bg-color: #c2c2c2;
+    --nav-color: #18291f;
+    --card-color: #d9feff;
+    --accent-color: #6dbd38;
+    --text-color: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.page-header {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffcd37;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    margin: 0.75rem 0 0;
+    font-size: 1.1rem;
+}
+
+.nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem;
+    background-color: var(--nav-color);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 32rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    padding: 1.3rem;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border: 2px solid #1f3d2b;
+    border-radius: 8px;
+    background-color: var(--card-color);
+}
+
+.card img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    min-height: 12rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.card-content p {
+    margin: 1rem 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+    }
+
+    .page-header p {
+        font-size: 1.2rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 1rem;
+    }
+
+    .card {
+        min-height: 100vh;
+    }
+
+    .card img {
+        height: 45vh;
+    }
+
+    .card-content h2 {
+        font-size: 2rem;
+    }
+
+    .card-content p,
+    button {
+        font-size: 1.2rem;
+    }
+}
